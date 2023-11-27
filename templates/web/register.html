@@ -1,0 +1,92 @@
+{% extends "web/base.html" %}
+
+{% load static %}
+
+{% block content %}
+   <!-- Faq Section Start -->
+            <div class="rs-faq-part style1 pt-100 pb-100 md-pt-70 md-pb-70">
+              <div class="container">
+                  <div class="row">
+                      <div class="col-lg-6 padding-0 col-md-12 md-mb-40">
+                        <div class="main-part new-style">
+                          <div class="title mb-20">
+                              <h2 class="text-part">Frequently Asked Questions</h2>
+                          </div>
+                            <div class="faq-content">
+                                <div id="accordion" class="accordion">
+                                   <div class="card">
+                                       <div class="card-header">
+                                           <a class="card-link" data-toggle="collapse" href="#collapseOne"> How do I register for courses?</a>
+                                       </div>
+                                       <div id="collapseOne" class="collapse show" data-parent="#accordion">
+                                           <div class="card-body">
+                                            To register for courses, log in to your student portal or the institution's online platform. Navigate to the section for course registration, select the courses you wish to take, and add them to your schedule.
+                                           </div>
+                                       </div>
+                                   </div>
+                                    <div class="card">
+                                        <div class="card-header">
+                                           
+                                            <a class="card-link collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false">What should I do if a course I want is full?</a>
+                                        </div>
+                                        <div id="collapseTwo" class="collapse" data-parent="#accordion" style="">
+                                            <div class="card-body">
+                                              If a course you're interested in is full, check if there's a waitlist option available. If so, join the waitlist. 
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-header">
+                                           
+                                            <a class="card-link collapsed" data-toggle="collapse" href="#collapseThree" aria-expanded="false"> Can I make changes to my course schedule</a>
+                                        </div>
+                                        <div id="collapseThree" class="collapse" data-parent="#accordion" style="">
+                                            <div class="card-body">
+                                              Yes, you can usually make changes to your course schedule within a specified add/drop period. This period varies by institution and is typically mentioned in the academic calendar.
+                                            </div>
+                                        </div>
+                                    </div>   
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-6 padding-0 col-md-12">
+                          <div class="rs-free-contact">
+                              <div class="sec-title3">
+                                  <h2 class="title white-color">Register Courses Enquirys</h2>
+                              </div>
+                                  <form id="contactForm" method="post" action="" enctype="multipart/form-data" class="form register">
+                                    {% csrf_token %}
+
+                                      <div class="row">
+                                          <div class="col-lg-6 mb-30 col-md-12" >
+                                            {{form.name}}
+                                          </div> 
+                                          <div class="col-lg-6 mb-30 col-md-12">
+                                            {{form.email}}
+                                          </div>   
+                                          <div class="col-lg-6 mb-30 col-md-12">
+                                            {{form.phone}}
+                                          </div>   
+                                          <div class="col-lg-6 mb-30 col-md-12">
+                                            {{form.subject}}
+                                          </div>
+                                       
+                                          <div class="col-lg-12 mb-35">
+                                            {{form.message}}
+                                          </div>
+                                      </div>
+                                      <div class="form-btn">
+                                          <!--<input class="submit" type="submit" value="send message">-->
+                                          
+                                          <button  class=" readon submit-requset" type="submit">Register</button>
+                                      </div>
+                              </form>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <!-- faq Section Start -->
+{% endblock %}

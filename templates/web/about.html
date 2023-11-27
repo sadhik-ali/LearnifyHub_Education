@@ -1,0 +1,203 @@
+{% extends "web/base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+
+
+			<!-- About Section Start -->
+			<div id="rs-about" class="rs-about style1 pt-100 pb-100 md-pt-70 md-pb-70">
+				<div class="container">
+					<div class="row align-items-center">
+						<div class="col-lg-6 order-last padding-0 md-pl-15 md-pr-15 md-mb-30">
+							<div class="img-part">
+								<img class="" src="{% static 'web/images/about/about2orange.png' %}" alt="About Image">
+							</div>
+						</div>
+						<div class="col-lg-6 pr-70 md-pr-15">
+							<div class="sec-title">
+								<div class="sub-title orange">About LearnifyHub</div>
+								<h2 class="title mb-17">Welcome to LearnifyHub</h2>
+								<div class="bold-text mb-22">At LearnifyHub, we are committed to providing a user-friendly platform that prioritizes accessibility, inclusivity, and continuous improvement. </div>
+								<div class="desc">At LearnifyHub, we are passionate about revolutionizing education and learning experiences for all. Our platform is dedicated to offering comprehensive educational resources, fostering creativity, and empowering learners worldwide.</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- About Section End -->
+
+			<!-- Counter Section Start -->
+			<div id="rs-counter" class="rs-counter style2-about pt-100 md-pt-70">
+				<div class="container">
+					<div class="row couter-area">
+						<div class="col-md-4 sm-mb-30">
+							<div class="counter-item text-center">
+								<div class="counter-bg">
+									<img src="{% static 'web/images/counter/bg1.png' %}" alt="Counter Image">
+								</div>
+								<div class="counter-text">
+									<h2 class="rs-count plus">1349</h2>
+									<h4 class="title mb-0">Students</h4>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 sm-mb-30">
+							<div class="counter-item text-center">
+								<div class="counter-bg">
+									<img src="{% static 'web/images/counter/bg2.png' %}" alt="Counter Image">
+								</div>
+								<div class="counter-text">
+									<h2 class="rs-count">4.50</h2>
+									<h4 class="title mb-0">Average LPA</h4>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="counter-item text-center">
+								<div class="counter-bg">
+									<img src="{% static 'web/images/counter/bg3.png' %}" alt="Counter Image">
+								</div>
+								<div class="counter-text">
+									<h2 class="rs-count percent">97</h2>
+									<h4 class="title mb-0">placement</h4>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Counter Section End -->
+
+			<!-- About Section Start -->
+			<div class="rs-about style1 pt-100 pb-100 md-pt-70 md-pb-70">
+				<div class="container">
+					<div class="row align-items-center">
+						<div class="col-lg-6 padding-0 md-pl-15 md-pr-15 md-mb-30">
+							<div class="img-part">
+								<img class="" src="{% static 'web/images/about1.jpg' %}" alt="About Image">
+							</div>
+                            <ul class="nav nav-tabs histort-part" id="myTab" role="tablist">
+                                <li class="nav-item tab-btns single-history">
+                                    <a class="nav-link tab-btn active" id="about-history-tab" data-toggle="tab" href="#about-history" role="tab" aria-controls="about-history" aria-selected="true"><span class="icon-part"><i class="flaticon-banknote"></i></span>History</a>
+                                </li>
+                                <li class="nav-item tab-btns single-history">
+                                    <a class="nav-link tab-btn" id="about-mission-tab" data-toggle="tab" href="#about-mission" role="tab" aria-controls="about-mission" aria-selected="false"><span class="icon-part"><i class="flaticon-flower"></i></span>Mission & Vission</a>
+                                </li>
+                                <li class="nav-item tab-btns single-history last-item">
+                                    <a class="nav-link tab-btn" id="about-admin-tab" data-toggle="tab" href="#about-admin" role="tab" aria-controls="about-admin" aria-selected="false"><span class="icon-part"><i class="flaticon-analysis"></i></span>Administration</a>
+                                </li>
+                            </ul>
+						</div>
+						<div class="offset-lg-1"></div>
+						<div class="col-lg-5">
+							<div class="tab-content tabs-content" id="myTabContent">
+                                <div class="tab-pane tab fade show active" id="about-history" role="tabpanel" aria-labelledby="about-history-tab">
+                                    <div class="sec-title mb-25">
+                                        <h2 class="title">LearnifyHub History</h2>
+                                        <div class="desc">As technology advanced, LearnifyHub expanded its curriculum to include specialized courses in cybersecurity, data science, artificial intelligence, cloud computing, DevOps, and machine learning. </div>
+                                    </div>
+                                    <div class="tab-img">
+                                        <img class="" src="{% static 'web/images/about2.jpg' %}" alt="Tab Image">
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="about-mission" role="tabpanel" aria-labelledby="about-mission-tab">
+                                    <div class="sec-title mb-25">
+                                        <h2 class="title">LearnifyHub Mission</h2>
+                                        <div class="desc">Our mission is to make learning accessible, engaging, and effective for everyone. We believe that education is the cornerstone of personal and societal growth.</div>
+                                    </div>
+                                    <div class="tab-img">
+                                        <img class="" src="{% static 'web/images/about3.jpg' %}" alt="Tab Image">
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="about-admin" role="tabpanel" aria-labelledby="about-admin-tab">
+                                    <div class="sec-title mb-25">
+                                        <h2 class="title">LearnifyHub Administration</h2>
+                                        <div class="desc">Managing student enrollment, registration processes, and providing access to courses.Handling payment transactions, billing cycles, and financial operations related to course fees.	</div>
+                                    </div>
+                                    <div class="tab-img">
+                                        <img class="" src="{% static 'web/images/about4.jpg' %}" alt="Tab Image">
+                                    </div>
+                                </div>
+                            </div>
+						</div>
+					</div>
+                    <!-- Intro Info Tabs-->
+                    <div class="intro-info-tabs">
+                        
+                    </div>
+				</div>
+			</div>
+			<!-- About Section End -->         
+
+			<!-- Testimonial Section Start -->
+			<div class="rs-testimonial style2 pt-100 pb-100 md-pt-70 md-pb-70">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-5 pr-90 md-pr-15 md-mb-30">
+							<div class="donation-part">
+								<img src="{% static 'web/images/about5.jpg' %}" alt="">
+								<h3 class="title mb-10">Online Course</h3>
+								<div class="desc mb-38">Explore the depths of cybersecurity, programming, and more with our accredited online IT courses.</div>
+								<div class="btn-part">
+										<a class="readon2 orange" href="{% url 'web:contact' %}">Contact Now</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-7 lg-pl-0 ml--15 md-ml-0">
+							<div class="testi-wrap mb-50">
+								<div class="img-part">
+									<!--<img src="{% static 'web/images/testimonial/style2/1.jpg' %}" alt="">-->
+								</div>
+								<div class="content-part new-content pt-12">
+									<div class="desc">Comprehensive IT course integrating practical labs and personalized mentorship for practical skill development.</div>
+								</div>
+							</div>
+							<div class="testi-wrap">
+								<div class="img-part">
+								<!--	<img src="{% static 'web/images/testimonial/style2/2.jpg' %}" alt="">-->
+								</div>
+								<div class="content-part new-content pt-12">
+									<div class="desc">Cutting-edge IT course integrating hands-on projects with real-world applications for comprehensive skill development.</div>
+								</div>
+							</div>
+							<br>
+							<div class="testi-wrap">
+								<div class="img-part">
+								<!--	<img src="{% static 'web/images/testimonial/style2/2.jpg' %}" alt="">-->
+								</div>
+								<div class="content-part new-content pt-12">
+									<div class="desc">Comprehensive IT course integrating practical labs and personalized mentorship for mastering real-world skills.</div>
+								</div>
+							</div>
+							
+						</div>
+						
+					</div>
+				</div>
+			</div>
+			<!-- Testimonial Section End -->
+
+			<!-- Partner Start -->
+			<div class="rs-partner pb-100 md-pb-70">
+				<div class="container">
+					<div class="rs-carousel owl-carousel" data-loop="true" data-items="5" data-margin="30" data-autoplay="true" data-hoverpause="true" data-autoplay-timeout="5000" data-smart-speed="800" data-dots="false" data-nav="true" data-nav-speed="false" data-center-mode="false" data-mobile-device="1" data-mobile-device-nav="false" data-mobile-device-dots="false" data-ipad-device="2" data-ipad-device-nav="false" data-ipad-device-dots="false" data-ipad-device2="2" data-ipad-device-nav2="false" data-ipad-device-dots2="false" data-md-device="5" data-md-device-nav="true" data-md-device-dots="false">
+    						<div class="partner-item">
+    							<a href="#"><img src="{% static 'web/images/partner/1.png' %}" alt=""></a>
+    						</div>
+    						<div class="partner-item">
+    							<a href="#"><img src="{% static 'web/images/partner/2.png' %}" alt=""></a>
+    						</div>
+    						<div class="partner-item">
+    							<a href="#"><img src="{% static 'web/images/partner/3.png' %}" alt=""></a>
+    						</div>
+    						<div class="partner-item">
+    							<a href="#"><img src="{% static 'web/images/partner/4.png' %}" alt=""></a>
+    						</div>
+					</div>
+				</div> 
+			</div>
+			<!-- Partner End -->
+
+{% endblock %}

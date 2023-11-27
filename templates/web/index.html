@@ -1,0 +1,315 @@
+{% extends "web/base.html" %}
+
+{% block content %}
+
+{% load static %}
+		<!-- Main content Start -->
+        <div class="main-content" >
+            <!-- Banner Section Start -->
+            <div id="rs-banner" class="rs-banner style10">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 pl-60 order-last">
+                            <div class="img-part">
+                               <img class="up-down-new" src="{% static 'web/images/last.png' %}" alt="" style="width: 500px;margin-top: -50px ;">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 pr-0">
+                            <div class="banner-content" style="margin-top: -100px !important;">
+                               <div class="sl-sub-title wow bounceInLeft" data-wow-delay="300ms" data-wow-duration="2000ms">IT Courses</div>
+                                <h1 class="sl-title wow fadeInLeft" data-wow-delay="300ms" data-wow-duration="3000ms">Strategic IT Leadership: Empowering Digital Futures
+                                </h1>
+                                <div class="banner-btn wow fadeInUp" data-wow-delay="1500ms" data-wow-duration="2000ms">
+                                    <a class="readon green-banner" href="#learn">Get Started</a>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+                <div class="banner-intro-box" style="margin-top: -150px !important;">
+                    <div class="shape-img">
+                        <img class="up-down-new" src="{% static 'web/images/banner/home12/dotted-shape.png' %}" alt="">
+                    </div>
+                    <div class="intro-img">
+                        <img class="spine2" src="{% static 'web/images/banner/home12/intro-box.png' %}" alt="">
+                    </div>
+                </div>
+            </div>
+            <!-- Banner Section End -->
+    
+
+            <!-- Services Section Start -->
+            <div id="rs-services" class="rs-services home12-style" style="margin-top: -200px !important;">
+                <div class="container">
+                    <div class="sec-title4 text-center mb-50">
+                        <div class="sub-title">Increase Your Skill</div>
+                        <h2 class="title purple-color">Explore Top Subjects</h2>
+                    </div> 
+                    <div class="row">
+                        {% for subject in top_subjects %}
+                        <div class="col-lg-4 md-mb-30">
+                           <div class="services-item">
+                               <div class="services-image">
+                                   <div class="services-icons">
+                                       <img src="{{subject.icon.url}}" alt="">
+                                   </div>
+                                   <div class="services-text">
+                                       <div class="services-title">
+                                           <h2 class="title">{{subject.title}}</h2>
+                                       </div>
+                                       <p class="text">{{subject.content}}</p>
+                                   </div>
+                               </div>
+                           </div> 
+                        </div>
+                        {% endfor %}
+                    </div>
+                    <div class="col-lg-12 text-center pt-45">
+                        <a class="readon green-btn" href="#">View All Subjects </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Services Section End -->
+
+            <!-- Categories Section Start -->
+            <div id="rs-popular-courses" class="rs-popular-courses main-home home12-style pt-90 pb-100 md-pt-0 md-pb-0" style="margin-top: -120px !important;">
+                <div class="container">
+                    <div class="sec-title4 text-center mb-45">
+                        <div class="sub-title">Select Courses</div>
+                        <h2 class="title black-color">Explore Popular Courses</h2>
+                    </div>
+                    <div class="row">
+                        {% for course in popular_courses %}
+                        <div class="col-lg-4 col-md-6 mb-30">
+                           <div class="courses-item">
+                                <div class="courses-grid">
+                                    <div class="img-part">
+                                        <a href="{% url 'web:course_detail' course.slug %}"><img src="{{ course.image.url }}" alt=""></a>
+                                    </div>
+                                    <div class="content-part">
+                                        <div class="info-meta">
+                                            <ul>                                                
+                                                <li class="ratings">
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    (1 rating)
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="course-price">
+                                            <span class="price">{{course.fees}}</span>
+                                        </div>
+                                        <h3 class="title"><a href="{% url 'web:course_detail' course.slug %}">{{course.name}}</a></h3>
+                                        <ul class="meta-part">
+                                            <li class="user">
+                                                <i class="fa fa-user"></i>
+                                                 {{course.students}}                                        
+                                            </li>
+                                            <li class="user">
+                                                <i class="fa fa-file"></i>
+                                                {{course.lessons}}                                        
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                           </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            <!-- Categories Section End -->
+
+            <!-- Choose Section Start -->
+            <div class="why-choose-us style3" id="learn">
+                <div class="container" style="margin-top: -160px !important;">
+                   <div class="row align-items-center">
+                       <div class="col-lg-6 js-tilt md-mb-40">
+                           <div class="img-part">
+                                <img src="{% static 'web/images/choose/home12/1.png' %}" alt="">
+                            
+                           </div>
+                       </div>
+                       <div class="col-lg-6 pl-60 md-pl-15">
+                            <div class="sec-title3 mb-30">
+                                <h2 class=" title new-title margin-0 pb-15">Why Learn Here</h2>
+                                <div class="new-desc">We understand that engagement drives effective learning.</div>
+                            </div>
+                            <div class="services-part mb-20">
+                                <div class="services-icon">
+                                    <img src="{% static 'web/images/choose/home12/icon/1.png' %}" alt="">
+                                </div>
+                                <div class="services-text">
+                                    <h2 class="title">Diverse Course Offerings</h2>
+                                    <p class="services-txt">A robust learning platform should offer a wide range of courses covering different subjects and skill levels. </p>
+                                </div>
+                            </div> 
+                            <div class="services-part mb-20">
+                                <div class="services-icon">
+                                    <img src="{% static 'web/images/choose/home12/icon/2.png' %}" alt="">
+                                </div>
+                                <div class="services-text">
+                                    <h2 class="title">Engaging Content Formats</h2>
+                                    <p class="services-txt">interactive elements such as quizzes, videos, simulations, and hands-on projects</p>
+                                </div>
+                            </div> 
+                            <div class="services-part">
+                                <div class="services-icon">
+                                    <img src="{% static 'web/images/choose/home12/icon/3.png' %}" alt="">
+                                </div>
+                                <div class="services-text">
+                                    <h2 class="title">Personalized Learning Paths and Support</h2>
+                                    <p class="services-txt"> Effective learning platforms often provide personalized learning paths tailored to individual needs.</p>
+                                </div>
+                            </div>
+                       </div> 
+                   </div> 
+                </div>
+            </div>
+            <!-- Choose Section End -->
+
+            <!-- Counter Section End -->
+            <div class="rs-counter home12-style pt-80">
+                <div class="container" style="margin-top: -160px !important;">
+                    <div class="row couter-area bg8">
+                        <div class="col-lg-3 col-md-6 md-mb-30">
+                            <div class="counter-item text-center">
+                                <h2 class="rs-count pr-0">50</h2>
+                                <span class="prefix">k</span>
+                                <h4 class="title mb-0">Enrolled Learners</h4>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 md-mb-30">
+                            <div class="counter-item text-center">
+                                <h2 class="number rs-count kplus">70</h2>
+                                <h4 class="title mb-0">Enrolled Learners</h4>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 sm-mb-30">
+                            <div class="counter-item text-center">
+                                <h2 class="rs-count plus">120</h2>
+                                <h4 class="title mb-0">Online Instructors</h4>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="counter-item text-center">
+                                <h2 class="rs-count percent">99</h2>
+                                <h4 class="title mb-0">Satisfaction Rate</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Counter Section Start -->
+    
+
+            <!-- Testimonial Section Start -->
+            <div class="rs-testimonial home12-style">
+                <div class="container" style="margin-top: -50px !important;">
+                    <div class="sec-title4 mb-50 md-mb-30 text-center">
+                        <div class="sub-title primary">Testimonial</div>
+                        <h2 class="title mb-0">What Our Students Says</h2>
+                    </div>
+                        <div class="rs-carousel owl-carousel" data-loop="true" data-items="3" data-margin="30" data-autoplay="true" data-hoverpause="true" data-autoplay-timeout="5000" data-smart-speed="800" data-dots="false" data-nav="true" data-nav-speed="false" data-center-mode="false" data-mobile-device="1" data-mobile-device-nav="false" data-mobile-device-dots="false" data-ipad-device="2" data-ipad-device-nav="false" data-ipad-device-dots="false" data-ipad-device2="1" data-ipad-device-nav2="false" data-ipad-device-dots2="false" data-md-device="3" data-md-device-nav="false" data-md-device-dots="false">
+
+                            {% for test in  testimonial %}
+                        <div class="testi-item">
+                            <div class="item-content-basic">
+                                <div class="desc"><img class="quote" src="{% static 'web/images/testimonial/home12/quote.png' %}" alt="">
+                                    {{test.content}}
+                                </div>
+                                <div class="testi-content">
+                                    <div class="img-wrap">
+                                        <img src="{{test.image.url}}" alt="">
+                                    </div>
+                                    <div class="name">
+                                        {{test.name}}
+                                    </div>
+                                    <span class="designation">{{test.teacher}}</span>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+
+                    </div>
+                </div>
+            </div>
+            <!-- Testimonial Section End -->
+
+             <!-- Events Section Start -->
+            <div class="rs-event home12style">
+                <div class="container" style="margin-top: -150px !important;">
+                    <div class="sec-title4 text-center mb-50">
+                        <div class="sub-title">Join Events</div>
+                        <h2 class="title purple-color">Upcoming Events</h2>
+                    </div> 
+                    <div class="rs-carousel owl-carousel" data-loop="true" data-items="3" data-margin="30" data-autoplay="true" data-autoplay-timeout="7000" data-smart-speed="2000" data-dots="true" data-nav="false" data-nav-speed="false" data-mobile-device="1" data-mobile-device-nav="false" data-mobile-device-dots="true" data-ipad-device="2" data-ipad-device-nav="false" data-ipad-device-dots="true" data-ipad-device2="1" data-ipad-device-nav2="false" data-ipad-device-dots2="true" data-md-device="3" data-md-device-nav="false" data-md-device-dots="true">
+                    {% for event in events %}
+                    <div class="event-item home12-style">
+                        <div class="event-short">
+                           <div class="featured-img">
+                               <img src="{{event.image.url}}" alt="Image">
+                           </div>
+                           <div class="content-part">
+                                <div class="all-dates-time">
+                                    <div class="address"><i class="fa fa-map-o"></i>{{event.location}}</div>
+                                    <div class="time"><i class="fa fa-clock-o" aria-hidden="true"></i>{{event.time}}</div>    
+                                </div>
+                               <h4 class="title"><a href="#">{{event.title}}</a></h4>
+                               <div class="event-btm">
+                                   <div class="date-part">
+                                       <div class="date">
+                                           <i class="fa fa-calendar-check-o"></i>
+                                           {{event.date}} 
+                                       </div>
+                                   </div>
+                                   <div class="btn-part">
+                                       <a href="{% url "web:event_register" %}">Join Event</a>
+                                   </div>
+                               </div>
+                           </div> 
+                        </div>
+                    </div>
+                    {% endfor %}
+
+                  </div>
+                </div> 
+            </div>
+            <!-- Events Section End -->
+
+        </div> 
+        <!-- Main content End -->
+
+
+
+
+        <!-- start scrollUp  -->
+        <div id="scrollUp" class="green-color">
+            <i class="fa fa-angle-up"></i>
+        </div>
+        <!-- End scrollUp  -->
+
+
+        <!-- Search Modal Start -->
+        <div aria-hidden="true" class="modal fade search-modal" role="dialog" tabindex="-1">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span class="flaticon-cross"></span>
+            </button>
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="search-block clearfix">
+                        <form>
+                            <div class="form-group">
+                                <input class="form-control" placeholder="Search Here..." type="text">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Search Modal End -->
+ 
+        {% endblock  %}

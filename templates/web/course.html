@@ -1,0 +1,63 @@
+{% extends "web/base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+		<!-- Main content Start -->
+        <div class="main-content">    
+             
+            <div id="rs-popular-courses" class="rs-popular-courses main-home home12-style pt-90 pb-100 md-pt-0 md-pb-0" style="padding: 0px;">
+              <div class="container">
+                  <div class="sec-title4 text-center mb-45">
+                      <div class="sub-title">Select Courses</div>
+                      <h2 class="title black-color">Explore Popular Courses</h2>
+                  </div>
+                  <div class="row">
+                      {% for course in popular_courses %}
+                      <div class="col-lg-4 col-md-6 mb-30">
+                         <div class="courses-item">
+                              <div class="courses-grid">
+                                  <div class="img-part">
+                                      <a href="{% url 'web:course_detail' course.slug %}"><img src="{{course.image.url}}" alt=""></a>
+                                  </div>
+                                  <div class="content-part">
+                                      <div class="info-meta">
+                                          <ul>                                                
+                                              <li class="ratings">
+                                                  <i class="fa fa-star"></i>
+                                                  <i class="fa fa-star"></i>
+                                                  <i class="fa fa-star"></i>
+                                                  <i class="fa fa-star"></i>
+                                                  <i class="fa fa-star"></i>
+                                                  (1 rating)
+                                              </li>
+                                          </ul>
+                                      </div>
+                                      <div class="course-price">
+                                          <span class="price">{{course.fees}}</span>
+                                      </div>
+                                      <h3 class="title"><a href="{% url 'web:course_detail' course.slug %}">{{course.name}}</a></h3>
+                                      <ul class="meta-part">
+                                          <li class="user">
+                                              <i class="fa fa-user"></i>
+                                               {{course.students}}                                        
+                                          </li>
+                                          <li class="user">
+                                              <i class="fa fa-file"></i>
+                                              {{course.lessons}}                                        
+                                          </li>
+                                      </ul>
+                                  </div>
+                              </div>
+                         </div>
+                      </div>
+                      {% endfor %}
+                  </div>
+              </div>
+          </div>
+        </div>   
+          <!-- Categories Section End -->
+
+        
+        {% endblock  %}

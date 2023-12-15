@@ -4,21 +4,28 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('web', '0014_coursesenquirys_remove_contact_timestamp'),
+        ("web", "0014_coursesenquirys_remove_contact_timestamp"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='EventsRegister',
+            name="EventsRegister",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=120)),
-                ('email', models.EmailField(blank=True, max_length=254, null=True)),
-                ('phone', models.CharField(blank=True, max_length=120, null=True)),
-                ('subject', models.CharField(blank=True, max_length=120, null=True)),
-                ('message', models.TextField()),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("name", models.CharField(max_length=120)),
+                ("email", models.EmailField(blank=True, max_length=254, null=True)),
+                ("phone", models.CharField(blank=True, max_length=120, null=True)),
+                ("subject", models.CharField(blank=True, max_length=120, null=True)),
+                ("message", models.TextField()),
             ],
         ),
     ]

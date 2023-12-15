@@ -1,12 +1,13 @@
-from django.shortcuts import render, get_object_or_404
-from .models import Popular_Courses, Top_Subjects,Events,Testimonial
-# from .models import Course
-from django.http import HttpResponse
-from .forms import ContactForm, CourseEnquiry, EventRegister
 import json
 
-# Create your views here.
+# from .models import Course
+from django.http import HttpResponse
+from django.shortcuts import get_object_or_404, render
 
+from .forms import ContactForm, CourseEnquiry, EventRegister
+from .models import Events, Popular_Courses, Testimonial, Top_Subjects
+
+# Create your views here.
 
 
 def index(request):
@@ -16,13 +17,13 @@ def index(request):
     testimonial = Testimonial.objects.all()
 
     context = {
-        'popular_courses': popular_courses,
-        'top_subjects': top_subjects,
-        'events': events,
-        'testimonial': testimonial
+        "popular_courses": popular_courses,
+        "top_subjects": top_subjects,
+        "events": events,
+        "testimonial": testimonial,
     }
-    
-    return render(request, 'web/index.html', context)
+
+    return render(request, "web/index.html", context)
 
 
 def contact(request):
@@ -49,23 +50,22 @@ def contact(request):
             "is_contact": True,
             "form": form,
         }
-    return render(request, 'web/contact.html', context)
+    return render(request, "web/contact.html", context)
 
 
 def course(request):
     popular_courses = Popular_Courses.objects.all()
     context = {
-        'popular_courses': popular_courses,
+        "popular_courses": popular_courses,
     }
 
-    return render(request,'web/course.html',context)
+    return render(request, "web/course.html", context)
 
-def course_detail(request , slug):
+
+def course_detail(request, slug):
     course = get_object_or_404(Popular_Courses, slug=slug)
-    context = {
-        "course" : course
-    } 
-    return render(request, 'web/course_detail.html', context)
+    context = {"course": course}
+    return render(request, "web/course_detail.html", context)
 
 
 def register(request):
@@ -92,7 +92,7 @@ def register(request):
             "is_register": True,
             "form": form,
         }
-    return render(request, 'web/register.html',context)
+    return render(request, "web/register.html", context)
 
 
 def event_register(request):
@@ -120,9 +120,8 @@ def event_register(request):
             "form": form,
         }
 
-    return render(request, 'web/event_register.html',context)
+    return render(request, "web/event_register.html", context)
 
 
 def about(request):
-    return render(request, 'web/about.html')
-
+    return render(request, "web/about.html")

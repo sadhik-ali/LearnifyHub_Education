@@ -4,22 +4,28 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='Popular_Courses',
+            name="Popular_Courses",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('image', models.ImageField(upload_to='media')),
-                ('name', models.CharField(max_length=100)),
-                ('students', models.CharField(max_length=50)),
-                ('lessons', models.CharField(max_length=50)),
-                ('fees', models.CharField(max_length=50)),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("image", models.ImageField(upload_to="media")),
+                ("name", models.CharField(max_length=100)),
+                ("students", models.CharField(max_length=50)),
+                ("lessons", models.CharField(max_length=50)),
+                ("fees", models.CharField(max_length=50)),
             ],
         ),
     ]

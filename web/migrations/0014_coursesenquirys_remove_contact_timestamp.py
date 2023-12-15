@@ -4,25 +4,32 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('web', '0013_popular_courses_duration_popular_courses_lectures_and_more'),
+        ("web", "0013_popular_courses_duration_popular_courses_lectures_and_more"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='CoursesEnquirys',
+            name="CoursesEnquirys",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=120)),
-                ('email', models.EmailField(blank=True, max_length=254, null=True)),
-                ('phone', models.CharField(blank=True, max_length=120, null=True)),
-                ('subject', models.CharField(blank=True, max_length=120, null=True)),
-                ('message', models.TextField()),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("name", models.CharField(max_length=120)),
+                ("email", models.EmailField(blank=True, max_length=254, null=True)),
+                ("phone", models.CharField(blank=True, max_length=120, null=True)),
+                ("subject", models.CharField(blank=True, max_length=120, null=True)),
+                ("message", models.TextField()),
             ],
         ),
         migrations.RemoveField(
-            model_name='contact',
-            name='timestamp',
+            model_name="contact",
+            name="timestamp",
         ),
     ]

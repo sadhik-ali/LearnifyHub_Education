@@ -4,22 +4,29 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('web', '0005_delete_contact_delete_email'),
+        ("web", "0005_delete_contact_delete_email"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='Contact',
+            name="Contact",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=120)),
-                ('timestamp', models.DateTimeField(auto_now_add=True, db_index=True)),
-                ('email', models.EmailField(blank=True, max_length=254, null=True)),
-                ('phone', models.CharField(blank=True, max_length=120, null=True)),
-                ('subject', models.CharField(blank=True, max_length=120, null=True)),
-                ('message', models.TextField()),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("name", models.CharField(max_length=120)),
+                ("timestamp", models.DateTimeField(auto_now_add=True, db_index=True)),
+                ("email", models.EmailField(blank=True, max_length=254, null=True)),
+                ("phone", models.CharField(blank=True, max_length=120, null=True)),
+                ("subject", models.CharField(blank=True, max_length=120, null=True)),
+                ("message", models.TextField()),
             ],
         ),
     ]

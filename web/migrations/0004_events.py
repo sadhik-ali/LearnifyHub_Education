@@ -4,21 +4,28 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('web', '0003_contact_email'),
+        ("web", "0003_contact_email"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='Events',
+            name="Events",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('image', models.ImageField(upload_to='media')),
-                ('location', models.CharField(max_length=100)),
-                ('time', models.TimeField()),
-                ('title', models.CharField(max_length=200)),
-                ('date', models.DateField()),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("image", models.ImageField(upload_to="media")),
+                ("location", models.CharField(max_length=100)),
+                ("time", models.TimeField()),
+                ("title", models.CharField(max_length=200)),
+                ("date", models.DateField()),
             ],
         ),
     ]

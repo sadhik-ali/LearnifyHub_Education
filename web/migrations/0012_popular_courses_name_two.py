@@ -4,15 +4,14 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('web', '0011_popular_courses_requirement_five_and_more'),
+        ("web", "0011_popular_courses_requirement_five_and_more"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='popular_courses',
-            name='name_two',
+            model_name="popular_courses",
+            name="name_two",
             field=models.CharField(default=1, max_length=100),
             preserve_default=False,
         ),
